@@ -18,11 +18,26 @@
 #   hubot show active polls
 #   hubot end poll <id> [and archive as <name>]
 #   hubot delete <name> from archive
+#   hubot polling help
 #
 # Author:
 #   Matthew Crocco
 
 module.exports = (robot) ->
+
+    polling_commands = [
+        "#{robot.name} poll people about <topic> with options <choiceOne, choiceTwo, ..., choiceN>",
+        "#{robot.name} vote in <id> for <option>",
+        "#{robot.name} view <id>",
+        "#{robot.name} view <name> from archive",
+        "#{robot.name} show options for <id>",
+        "#{robot.name} show voters for <id>",
+        "#{robot.name} what did I vote for in <id>?",
+        "#{robot.name} show active polls",
+        "#{robot.name} end poll <id> [and archive as <name>]",
+        "#{robot.name} delete <name> from archive",
+        "#{robot.name} polling help"
+    ]
 
     if not robot.brain.uuid_map?
         robot.brain.uuid_map = {}
@@ -33,7 +48,7 @@ module.exports = (robot) ->
     if not robot.brain.archives?
         robot.brain.archives = {}
 
-    _saveBrain = -> robot.brain.emit 'save'
+    _saveBrain = -> robot.brain.save()
 
     isIdExists = (uuid) -> return uuid of robot.brain.uuid_map
 
@@ -329,3 +344,10 @@ module.exports = (robot) ->
         .forEach (v) -> resp += "\nChoice \##{v[0]}: '#{v[1]}' with #{poll.getVotesFor(v[0])}"
 
         msg.reply resp
+
+    robot.respond /polling help/i, (msg) ->
+        resp = ""
+        for cmd in polling_commands
+            resp += "#{cmd}\n"
+
+        msg.send resp.substring(0, resp.length-1)
