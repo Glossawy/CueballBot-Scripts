@@ -43,7 +43,7 @@ module.exports = (robot) ->
          res.send res.random responses
          res.send getUrl(input)
 
-    robot.hear /@?(\w+),?:? google (?!it|that)(.*)/i, (res) ->
+    robot.hear /@?(.*?),?:? google (?!it|that)(.*)/i, (res) ->
        message = ""
        target = res.match[1]
        query = res.match[2]
@@ -52,5 +52,5 @@ module.exports = (robot) ->
        if target != "cueball" and targetUser?
          res.send getLmgtfy(query)
          setTimeout () ->
-          res.send "Was that so hard, #{targetUser.name}"
+          res.send "_Was that so hard, #{targetUser.name}?_"
          , 2500
