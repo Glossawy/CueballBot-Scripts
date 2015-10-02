@@ -9,7 +9,7 @@
 # 
 # Commands:
 #   hubot google <query> - Cueball provides the search link and a witty response!
-#   google <query> - provide a lmgtfy link for string
+#   (@user) google <query> - provide a lmgtfy link for string
 # 
 # Author:
 #   Justin Tervay and Matthew Crocco
