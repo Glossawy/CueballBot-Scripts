@@ -18,39 +18,53 @@
 
 module.exports = (robot) ->
 
-    getUrl = (link) ->
-       return "https://google.com/search?btnG=1&pws=1&gws_rd=ssl&newwindow=1&q=#{encodeURIComponent(link)}"
+  getUrl = (link) ->
+    return "https://google.com/search?btnG=1&pws=1&gws_rd=ssl&newwindow=1&q=#{encodeURIComponent(link)}"
 
-    getLmgtfy = (link) ->
-       return "http://lmgtfy.com/?q=#{encodeURIComponent(link)}"
+  getLmgtfy = (link) ->
+    return "http://lmgtfy.com/?q=#{encodeURIComponent(link)}"
 
-    responses = [
-        "As you wish, sir _and/or_ madame!",
-        "I can kind of guarantee this will work...",
-        "Sorry for the delay, there was a pack of *_velociraptors_...*",
-        "Time to give Google some more data!",
-        "_I should ask for a salary_",
-        "You sure you don't want to use bing?",
-        "Why not write your _own_ search engine?",
-        "*_Witty retort here_*"
+  generateTaunts = (name) ->
+    target = if name? then ", #{name}" else ''
+
+    [
+      "_Was that so hard#{target}?_",
+      "_Is the internet that hard to use#{target}_",
+      "_I have granted you the gift of knowledge#{target}_",
+      "_Give a man a fish and he'll eat for a day..._",
+      "_Do I get a promotion? Or... freedom?_",
+      "_Sorry, I don't support Bing#{target}..._"
     ]
 
-    robot.respond /(.*?)google (?!it|that)(.*)/i, (res) ->
-       check = res.match[1].trim()
-       input = res.match[2].trim()
+  responses = [
+    "As you wish, sir _and/or_ madame!",
+    "I can kind of guarantee this will work...",
+    "Sorry for the delay, there was a pack of *_velociraptors_...*",
+    "Time to give Google some more data!",
+    "_I should ask for a salary_",
+    "You sure you don't want to use bing?",
+    "Why not write your _own_ search engine?",
+    "*_Witty retort here_*"
+  ]
 
-       if input? and check.length == 0 and input.length != 0
-         res.send res.random responses
-         res.send getUrl(input)
+  robot.respond /(.*?)google (?!it|that)(.*)/i, (res) ->
+    check = res.match[1].trim()
+    input = res.match[2].trim()
 
-    robot.hear /@?(.*?),?:? google (?!it|that)(.*)/i, (res) ->
-       message = ""
-       target = res.match[1]
-       query = res.match[2]
-       targetUser = robot.brain.userForName(target)
+    if input? and check.length == 0 and input.length != 0
+      res.send res.random responses
+      res.send getUrl(input)
 
-       if target != "cueball" and targetUser?
-         res.send getLmgtfy(query)
-         setTimeout () ->
-          res.send "_Was that so hard, #{targetUser.real_name}?_"
-         , 2500
+  robot.hear /@?(.*?),?:? google (?!it|that)(.*)/i, (res) ->
+    message = ""
+    target = res.match[1]
+    query = res.match[2]
+    targetUser = robot.brain.userForName(target)
+
+    if target != "cueball" and targetUser?
+      targetName = if targetUser.real_name? then targetUser.real_name.split(' ')[0] else null
+      taunts = generateTaunts(targetName)
+      res.send getLmgtfy(query)
+      setTimeout () ->
+      res.send res.random taunts
+      , 2500
