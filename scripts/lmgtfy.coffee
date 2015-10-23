@@ -52,5 +52,5 @@ module.exports = (robot) ->
        if target != "cueball" and targetUser?
          res.send getLmgtfy(query)
          setTimeout () ->
-          res.send "_Was that so hard, #{targetUser.name}?_"
+          res.send "_Was that so hard, #{targetUser.real_name}?_"
          , 2500

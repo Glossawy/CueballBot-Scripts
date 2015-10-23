@@ -14,6 +14,8 @@
 #   Matthew Crocco
 
 module.exports = (robot) ->
+	due_dates = robot.brain.get("due_dates") ? {}
+
 	filterMap = (map, predicate) ->
         result = {}
 
@@ -23,10 +25,8 @@ module.exports = (robot) ->
 
         return result
 
-    due_dates = robot.brain.get("due_dates") ? {}
-
 	save = ->
-		robot.brain.set("due_dates", due_dates)
+		robot.brain.set('due_dates', due_dates)
 		robot.brain.save()
 
 	robot.respond /on (.*?) (".*?") is due/, (msg) ->
