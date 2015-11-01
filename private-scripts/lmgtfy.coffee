@@ -26,7 +26,6 @@ module.exports = (robot) ->
 
   generateTaunts = (name) ->
     target = if name? then ", #{name}" else ''
-
     [
       "_Was that so hard#{target}?_",
       "_Is the internet that hard to use#{target}_",
@@ -66,5 +65,5 @@ module.exports = (robot) ->
       taunts = generateTaunts(targetName)
       res.send getLmgtfy(query)
       setTimeout () ->
-      res.send res.random taunts
+        res.send res.random taunts
       , 2500
