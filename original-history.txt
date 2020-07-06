@@ -1,0 +1,206 @@
+commit 776bb0f6896393d5cfe6be363495819fbe9cd5d9
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Mon Jul 6 05:15:31 2020 -0400
+
+    name
+
+commit 1ca9d6703560b53403ed0bfb1b13cfe96901a1ae
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 16:01:40 2015 -0500
+
+    Fix wat.coffee
+
+commit 04fa1e7378b16986ce026fff25669d580a91e22c
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 15:37:52 2015 -0500
+
+    add updated wat.coffee to scripts
+
+commit 0a7cf9c50ca91c0835bb8cca63c09458768780ab
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 15:36:45 2015 -0500
+
+    Update wat.coffee to listen for 'wat' by itself
+
+commit 929d3e8a1fd8936781dbeab7996ae41278e1d924
+Merge: 1e78db1 3230415
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 15:35:36 2015 -0500
+
+    Merge branch 'master' of https://github.com/Matt529/CueballBot-Scripts
+
+commit 1e78db1b9c27fedb63b0b38017c0dbb11a2fd58d
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 15:34:59 2015 -0500
+
+    Update wat.coffee to only listen for wat by itself
+
+commit 32304152df9e294f20038f3bb26167e0438e9de9
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 02:21:34 2015 -0500
+
+    Updated primary Cueball commands with cleaned files and expanded wat
+
+commit 8472f3f29167a4cf62f52f63b9ad0ade2579f7c7
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 02:15:57 2015 -0500
+
+    Cleanup and completely rollback due.coffee, lint and correct other files
+    while expanding wat.coffee.
+
+commit 3c05f87b0556cf695a8a79b4515887bc43e05fd4
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 22 01:19:36 2015 -0500
+
+    Move wat.coffee to main scripts, rollback due.coffee in private
+
+commit d2e72758870a65b8f490ed920b1a0ea9fb74deab
+Merge: bea0cc1 7ede050
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Nov 20 15:40:21 2015 -0500
+
+    Merge pull request #2 from jjk2673/master
+    
+    Added wat.coffee :+1:
+
+commit 7ede050a513892b3b99dbfe63066b2207026169e
+Author: Jonathan Kleinfeld <jjk2673@g.rit.edu>
+Date:   Fri Nov 20 15:33:21 2015 -0500
+
+    Added wat.coffee
+    
+    New: ability to summon "wat lady" by typing "wat" in the slack chat
+
+commit bea0cc13471853b675385deb407685688769e7e1
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sun Nov 15 00:54:46 2015 -0500
+
+    Rollback due.coffee until we resolve Notification issues
+
+commit a650bd5db59019f14b0d5154b9f65fae7198ba11
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sat Oct 31 21:08:51 2015 -0400
+
+    Added reminders to due.coffee
+    and fixed delay on lmgtfy (I think)
+
+commit 98cfdb3cdc2d82aff646082e9dae84c51af1d0b3
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 23 14:33:39 2015 -0400
+
+    Updated lmgtfy.coffee
+
+commit a92ce5a015bb0161aa6495df22403d00cb4fe281
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 23 01:41:51 2015 -0400
+
+    Persistence Fix with update to due.coffee and lmgtfy.coffee
+    
+    Persistence is now fixed with a custom, file-based implementation of
+    a brain. the Due module has been updated to use this persistence and
+    lmgtfy had a slight update to print the users real name. That way they aren't
+    notified twice unnecessarily
+
+commit 72f757cbf253ba2dd89318ed09585858f13ba914
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Thu Oct 22 13:52:15 2015 -0400
+
+    Integrate spoopy.coffee and clean
+    
+    Move spoopy.coffee to proper directory and removed polling.coffee from
+    active scripts until persistence is fixed.
+
+commit b4955fcb0b4989d9d28868bbb078b70243178aa8
+Merge: 351a533 9e82a0e
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Thu Oct 22 13:39:17 2015 -0400
+
+    Merge pull request #1 from Tacotrain1/patch-1
+    
+    Merged new gif command
+
+commit 9e82a0e448ad5fe7c6f7bdd51f44c91ffa7e9e24
+Author: Tacotrain1 <gibby75400@gmail.com>
+Date:   Wed Oct 21 18:22:56 2015 -0400
+
+    Create spoopy.coffee
+    
+    Spoopy command for Cueball in Slack Chat!
+
+commit 351a533cee03b49ad6a9221a919315380cbc26e6
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 2 02:54:49 2015 -0400
+
+    Update Active Bot Script Listings
+
+commit 64131a4ff1de60ef84cbec8d11412f0ea603d603
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 2 02:53:32 2015 -0400
+
+    Add Due Date script
+
+commit 88544d7adfe4fe1d894b053022a8592e84eec9b9
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 2 02:07:21 2015 -0400
+
+    We now work with any name!
+    Update name capture from a word capture to a lazy capture all, now
+    any username will be caught. Also make Cueball more sarcastic.
+
+commit a886f636f9b622f44ec0f18af28b5ce09fd0abae
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 2 02:01:03 2015 -0400
+
+    Quick command description update
+
+commit b612c4cee5ae803d47e7a85312066ef599565437
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 2 01:59:42 2015 -0400
+
+    Tab Fix
+
+commit 0ea4e0bec1821931c58c4f726a74c04a1e3233c4
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Fri Oct 2 01:55:20 2015 -0400
+
+    Clean up entire script
+    Separate into two different functions for LMGTFY sarcasm and general Google use
+    with witty Cueball responses. Move to purely CoffeeScript and clean up the regular
+    expression usage (refinement).
+
+commit 07f6b7daad01374a9a246afc95b38f6cb5100829
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Thu Oct 1 23:30:53 2015 -0400
+
+    Update README.md
+
+commit d2aec37ae851ec8c81a71cf2ac347617e3ccbd20
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sat Sep 26 18:20:00 2015 -0400
+
+    Finalize polling
+
+commit 803a29d17c643ddb3fc4ed6009e4c27497ac52b3
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sat Sep 26 04:28:33 2015 -0400
+
+    Finalize polling as v1.0.0 and move yee.coffee to private-scripts
+
+commit 2b93144d646ebcb91de15d6bf3c92188a8fe5817
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sat Sep 26 00:51:09 2015 -0400
+
+    Move user created scripts into separate directory that is merged with the
+    default provided scripts on the Cueball Server
+
+commit f8e3685db4740e4c1b10734ff71da820bdc92dfc
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sat Sep 26 00:48:27 2015 -0400
+
+    Initial Commit
+
+commit 33837990bac81c3fd567a0f8760b6b39783a19f7
+Author: Glossawy <4606234+Glossawy@users.noreply.github.com>
+Date:   Sat Sep 26 00:45:46 2015 -0400
+
+    Initial commit
